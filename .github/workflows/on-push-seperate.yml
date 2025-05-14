@@ -19,6 +19,7 @@ jobs:
         run: npm run lint
 
   Build-and-test:
+    needs: Lint-the-project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
