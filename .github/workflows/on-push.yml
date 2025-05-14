@@ -17,3 +17,9 @@ jobs:
 
       - name: Lint the code!
         run: npm run lint
+
+      - name: Build project
+        run: npm run build
+
+      - name: Test project
+        run: npm run test
