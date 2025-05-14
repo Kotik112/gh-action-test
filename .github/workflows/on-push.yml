@@ -3,7 +3,7 @@ name: Lint and Test Project
 on: [push]
 
 jobs:
-  Lint the project:
+  Lint-the-project:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
