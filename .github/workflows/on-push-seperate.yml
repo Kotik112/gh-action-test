@@ -36,3 +36,23 @@ jobs:
 
       - name: Test project
         run: npm run test
+
+      - name: Show runner and environment info
+        run: |
+          echo "✅ Workflow completed on:"
+          date
+
+          echo "🖥️ Runner info:"
+          uname -a
+
+          echo "🔧 Node version:"
+          node -v
+
+          echo "📦 NPM version:"
+          npm -v
+
+          echo "🧠 CPU info:"
+          lscpu | grep 'Model name'
+
+          echo "💾 Disk usage:"
+          df -h
