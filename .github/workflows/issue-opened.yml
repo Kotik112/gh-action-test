@@ -1,0 +1,17 @@
+name: Issue opened workflow!
+
+on:
+  issues:
+    types: [opened]
+jobs:
+  Echo-event-details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo event info!
+      run: |
+        echo "📝 Issue title: ${{ github.event.issue.title }}"
+        echo "👤 Opened by: ${{ github.event.issue.user.login }}"
+        echo "🔗 Issue URL: ${{ github.event.issue.html_url }}"
+        echo "📅 Created at: ${{ github.event.issue.created_at }}"
+        echo "🗣 Issue body:"
+        echo "${{ github.event.issue.body }}"
